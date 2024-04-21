@@ -1,3 +1,4 @@
 <launch>
+  <rosparam command="load" file="$(find gen3_lite_gen3_lite_2f_move_it_config)/config/sensors_3d.yaml" />
 
 </launch>
