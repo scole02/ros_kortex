@@ -5,6 +5,7 @@
     <arg name="start_gazebo" default="true"/>
     <arg name="gazebo_gui"   default ="true"/>
     <arg name="start_rviz" default="true"/>
+    <arg name="sim_d435" default="true"/>
     
     <!-- Initial position in Gazebo -->
     <arg name="x0" default="0"/>
@@ -169,6 +170,8 @@
         <group ns="d435">
             <include file="$(find realsense2_description)/launch/view_d435_model_rviz_gazebo.launch">
                 <arg name="start_gazebo" value="false"/>
+                <arg name="sim_d435" value="$(arg sim_d435)"/>
+                <arg name="use_sim_time" value="$(arg use_sim_time)"/>
             </include>
         </group>
         
