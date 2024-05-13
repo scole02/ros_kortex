@@ -1,0 +1,9 @@
+<launch>
+       <group ns="my_gen3_lite/d435">
+            <include file="$(find realsense2_description)/launch/view_d435_model_rviz_gazebo.launch">
+                <arg name="start_gazebo" value="false"/>
+                <arg name="sim_d435" value="$(arg sim_d435)"/>
+                <arg name="use_sim_time" value="false"/>
+            </include>
+        </group>
+</launch>

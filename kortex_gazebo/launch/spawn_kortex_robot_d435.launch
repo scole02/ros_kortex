@@ -166,6 +166,7 @@
         <!-- Start RViz -->
         <!-- <node name="rviz" pkg="rviz" type="rviz" if="$(arg start_rviz)"/>  -->
         <node name="rviz" pkg="rviz" type="rviz" args="-d $(find realsense2_description)/rviz/urdf.rviz" required="true" />
+         <node pkg="tf2_ros" type="static_transform_publisher" name="world_to_base" args="0 0 0 0 0 0 world base_link" />
 
         <group ns="d435">
             <include file="$(find realsense2_description)/launch/view_d435_model_rviz_gazebo.launch">
